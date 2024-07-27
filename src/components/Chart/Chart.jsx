@@ -1,6 +1,7 @@
 // src/App.jsx
 import React, { Component } from 'react';
 import CanvasJSReact from '@canvasjs/react-charts';
+import { Table } from './Table';
 // var CanvasJSReact = require('@canvasjs/react-charts');
  
 var CanvasJS = CanvasJSReact.CanvasJS;
@@ -42,12 +43,15 @@ class Chart extends Component {
 		}
 		
 		return (
+			<>
 			<div className="min-h-screen flex items-center justify-center bg-gray-100">
 				<div className="w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg">
 					<h1 className="text-2xl font-bold text-center mb-6">Simple Column Chart with Index Labels</h1>
 					<CanvasJSChart options={options} />
 				</div>
 			</div>
+			<Table />
+			</>
 		);
 	}
 }
