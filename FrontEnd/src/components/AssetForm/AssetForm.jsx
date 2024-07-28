@@ -1,6 +1,11 @@
+import axios from 'axios';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const UserForm = () => {
+  const navigate = useNavigate();
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
   const [formData, setFormData] = useState({
     type: '',
     name: '',
@@ -17,9 +22,27 @@ const UserForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    setError('');
+    setSuccess('');
+    try {
+      const response = await axios.post('http://localhost:8000/api/assets/create', formData);
+      if(response.status === 201){
+        navigate('/resource-allowcation');
+        setSuccess('Asset created successfully');
+        setFormData({
+          type: '',
+          name: '',
+          identifier: '',
+          location: '',
+          value: ''
+        });
+      }
+    }catch(err){
+      setError(err.response.data.message);
+      console.log(err.response.data);
+    }
   };
 
   return (

@@ -18,12 +18,12 @@ export default function Navbar() {
           <div className="flex items-center lg:order-2">
             <img
               className="h-12 w-12 rounded-3xl object-cover bg-blue-500 mx-1"
-              src="https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg"
+              src="https://www.pngitem.com/pimgs/m/581-5813504_avatar-dummy-png-transparent-png.png"
               alt="user"
             />
             <div className="flex flex-col">
               <span className="text-sm font-medium text-gray-900">
-                Dan Abromov
+                Administrator
               </span>
             </div>
           </div>

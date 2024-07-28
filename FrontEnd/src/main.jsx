@@ -20,12 +20,16 @@ import AssetForm from "./components/AssetForm/AssetForm";
 import { ResourseAllowcation } from "./components/Resource Allowcation/ResourceAllowcation";
 import Chart from "./components/Chart/Chart";
 import Prediction from "./components/PredictionMaintenace/PredictionPage";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 // import PreditionCase from "./components/PredictionMaintenace/PredictionForm";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Hero />} />
+      <Route path="/signin" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
       <Route path="/benefits" element={<Benefits />} />
       <Route path="/feature" element={<Feature />} />
       <Route path="/contact" element={<Contact />} />
@@ -63,10 +67,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 // import Benefits from './components/BenefitSection';
 // import Feature from './components/Feature';
 // import Contact from './components/Contact';
-// import User from './components/User/User';
-// import AssetForm from './components/AssetForm/AssetForm';
-// import PreditionCase from './components/PredictionMaintenace/Prediction';
-// import { ResourseAllowcation } from './components/Resource Allowcation/ResourceAllowcation';
+// // import User from './components/User/User';
+// import AssetForm from "./components/AssetForm/AssetForm";
+// import PreditionCase from "./components/PredictionMaintenace/PredictionForm";
+// import { ResourseAllowcation } from "./components/Resource Allowcation/ResourceAllowcation";
 // import Chart from './components/Chart/Chart';
 // import SignIn from './components/Login';
 // import SignUp from './components/SignUp';
