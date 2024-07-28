@@ -17,9 +17,10 @@ import Feature from "./components/Feature";
 import Contact from "./components/Contact";
 import User from "./components/User/User";
 import AssetForm from "./components/AssetForm/AssetForm";
-import PreditionCase from "./components/PredictionMaintenace/Prediction";
 import { ResourseAllowcation } from "./components/Resource Allowcation/ResourceAllowcation";
 import Chart from "./components/Chart/Chart";
+import Prediction from "./components/PredictionMaintenace/PredictionPage";
+// import PreditionCase from "./components/PredictionMaintenace/PredictionForm";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,7 +31,8 @@ const router = createBrowserRouter(
       <Route path="/contact" element={<Contact />} />
       <Route path="user/:userid" element={<User />} />
       <Route path="/asset" element={<AssetForm />} />
-      <Route path="/asset-prediction" element={<PreditionCase />} />
+      {/* <Route path="/asset-prediction" element={<PreditionCase />} /> */}
+      <Route path="/asset-prediction" element={<Prediction />} />
       <Route path="/resource-allowcation" element={<ResourseAllowcation />} />
       <Route path="/chart" element={<Chart />} />
 
